@@ -1,0 +1,39 @@
+﻿The following transaction was accepted with NEO Markets acting as intermediary only.
+       
+@foreach (var order in Model.ListOrderFillEmailTemplate)
+{
+    @:Transaction No: @order.TransactionNo
+    @:Transaction Date: @order.TransactionDate
+    @:Buyer: @order.Buyer
+    @:Seller: @order.Seller
+    @:Product: @order.Product
+    @:Volume: @order.VolumeString
+    @:Location: @order.Location
+    @:Comment: @*@order.Comment*@
+    @:Term: @order.Term
+    @:Cash Price: @order.Currency @order.CashPrice per @order.PriceUnit
+    @:
+    @:---------------------------------------------------------------------------------    
+}   
+        
+@*----- C O M M I S S I O N   S T A T E M E N T: @Model.CommisstionStatement -----
+        Volume Traded: @Model.VolumeTraded
+        Commission Rate:  @Model.CommissionRate
+
+            ------------------
+        Total Commission:  @Model.TotalCommisstion*@    
+  
+       
+Statement of Conditions:
+The Terms above have been confirmed on NEO Markets.
+Unless previously mutually agreed or specified in transaction commentary, the seller will write the contract and Seller's GT&C apply.
+
+Buyer also agrees to meet the credit requirements of the seller.
+
+NEO Markets has no further responsibility for this transaction or its completion.
+
+You will be sent an invoice at the end of the month for any applicable commissions relating to this transaction.
+
+If the above does not agree with your understanding please notify our office in writing immediately.
+
+Thank you for doing business with NEO Markets.

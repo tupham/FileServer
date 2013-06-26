@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Dialect xmlns="http://onixs.biz/fix/dialects"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://onixs.biz/fix/dialects http://onixs.biz/fix/dialects/dialects-2_9.xsd">
+
+  <!-- Do not forget to update the deprecated version below too. -->
+
+  <FIX version="5.0_SP2">
+
+    <Message type="X">
+      <Group numberOfInstancesTag="268" name="NoMDEntries">
+        <Field tag="5799" name="MatchEventIndicator" />
+        <Field tag="5797" name="AggressorSide" />
+        <Field tag="5790" name="FixingBracket" />
+        <Field tag="2852" name="TradabilityMask" />
+        <Field tag="9789" name="CompanyName" />
+      </Group>
+    </Message>
+
+    <Message type="W">
+      <Field tag="1682" name="MDSecurityTradingStatus" />
+      <Group numberOfInstancesTag="268" name="NoMDEntries">
+        <Field tag="451" isRequired="false" name="NetChgPrevDay" />
+        <Field tag="2852" name="TradabilityMask" />
+        <Field tag="9789" name="CompanyName" />
+      </Group>
+      <Field tag="911" isRequired="false" name="TotalNumReports" />
+    </Message>
+
+    <Message type="d">
+      <Field tag="731" name="SettlPriceType" />
+      <Field tag="980" name="SecurityUpdateAction" />
+      <Field tag="779" name="LastUpdateTime" />
+      <Field tag="911" name="TotNumReports" />
+      <Field tag="1150" name="TradingReferencePrice" />
+      <Field tag="1149" name="HighLimitPrice" />
+      <Field tag="1148" name="LowLimitPrice" />
+      <Field tag="1151" name="SecurityGroup" />
+      <Field tag="462" name="UnderlyingProduct" />
+      <Field tag="1140" name="MaxTradeVol" />
+      <Field tag="1142" name="MatchAlgorithm" />
+      <Field tag="1143" name="MaxPriceVariation" />
+      <Field tag="1144" name="ImpliedMarketIndicator" />
+      <Field tag="9787" name="DisplayFactor" />
+
+      <Group numberOfInstancesTag="555" name="NoLegs">
+        <Field tag="5795" name="LegSecurityGroup" />
+      </Group>
+
+      <Group numberOfInstancesTag="864" name="NoEvents">
+        <Field tag="1145" name="EventTime" />
+      </Group>
+
+      <Group numberOfInstancesTag="1141" name="NoMdFeedTypes">
+        <Field tag="1022" name="MDFeedType" />
+        <Field tag="264" name="MarketDepth" />
+      </Group>
+
+      <Group numberOfInstancesTag="1234" name="NoLotTypeRules">
+        <Field tag="1093" name="LotType" />
+        <Field tag="1231" name="MinLotSize" />
+      </Group>
+
+      <Field tag="5796" name="TradingReferenceDate" />
+      <Field tag="5792" name="OpenInterestQty" />
+      <Field tag="5791" name="ClearedVolume" />
+
+    </Message>
+
+    <Message type="f">
+      <Field tag="1174" name="SecurityTradingEvent" />
+    </Message>
+
+    <Message type="R">
+      <Group numberOfInstancesTag="146" name="NoAllocs">
+        <Field tag="131" name="QuoteReqID" />
+      </Group>
+    </Message>
+
+  </FIX>
+
+  <FIX version="5.0_SP2" id="CmeFastHandler" revision="CME 2.0, 2010-02-04">
+
+    <Message type="X">
+      <Group numberOfInstancesTag="268" name="NoMDEntries">
+        <Field tag="5799" name="MatchEventIndicator" />
+        <Field tag="5797" name="AggressorSide" />
+        <Field tag="5790" name="FixingBracket" />
+        <Field tag="2852" name="TradabilityMask" />
+        <Field tag="9789" name="CompanyName" />
+      </Group>
+    </Message>
+
+    <Message type="W">
+      <Field tag="1682" name="MDSecurityTradingStatus" />
+      <Group numberOfInstancesTag="268" name="NoMDEntries">
+        <Field tag="451" isRequired="false" name="NetChgPrevDay" />
+        <Field tag="2852" name="TradabilityMask" />
+        <Field tag="9789" name="CompanyName" />
+      </Group>
+      <Field tag="911" isRequired="false" name="TotalNumReports" />
+    </Message>
+
+    <Message type="d">
+      <Field tag="731" name="SettlPriceType" />
+      <Field tag="980" name="SecurityUpdateAction" />
+      <Field tag="779" name="LastUpdateTime" />
+      <Field tag="911" name="TotNumReports" />
+      <Field tag="1150" name="TradingReferencePrice" />
+      <Field tag="1149" name="HighLimitPrice" />
+      <Field tag="1148" name="LowLimitPrice" />
+      <Field tag="1151" name="SecurityGroup" />
+      <Field tag="462" name="UnderlyingProduct" />
+      <Field tag="1140" name="MaxTradeVol" />
+      <Field tag="1142" name="MatchAlgorithm" />
+      <Field tag="1143" name="MaxPriceVariation" />
+      <Field tag="1144" name="ImpliedMarketIndicator" />
+      <Field tag="9787" name="DisplayFactor" />
+
+      <Group numberOfInstancesTag="555" name="NoLegs">
+        <Field tag="5795" name="LegSecurityGroup" />
+      </Group>
+
+      <Group numberOfInstancesTag="864" name="NoEvents">
+        <Field tag="1145" name="EventTime" />
+      </Group>
+
+      <Group numberOfInstancesTag="1141" name="NoMdFeedTypes">
+        <Field tag="1022" name="MDFeedType" />
+        <Field tag="264" name="MarketDepth" />
+      </Group>
+
+      <Group numberOfInstancesTag="1234" name="NoLotTypeRules">
+        <Field tag="1093" name="LotType" />
+        <Field tag="1231" name="MinLotSize" />
+      </Group>
+
+      <Field tag="5796" name="TradingReferenceDate" />
+      <Field tag="5792" name="OpenInterestQty" />
+      <Field tag="5791" name="ClearedVolume" />
+
+    </Message>
+
+    <Message type="f">
+      <Field tag="1174" name="SecurityTradingEvent" />
+    </Message>
+
+    <Message type="R">
+      <Group numberOfInstancesTag="146" name="NoAllocs">
+        <Field tag="131" name="QuoteReqID" />
+      </Group>
+    </Message>
+
+  </FIX>
+
+</Dialect>

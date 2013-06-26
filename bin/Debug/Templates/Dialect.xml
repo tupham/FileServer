@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Dialect xmlns="http://onixs.biz/fix/dialects" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://onixs.biz/fix/dialects http://onixs.biz/fix/dialects/dialects-2_7.xsd">
+  <FIX version="4.3">
+    <Message type="G">
+      <Field tag="9717" name="CorrelationClOrdID" />
+    </Message>
+    <Message type="F">
+      <Field tag="9717" name="CorrelationClOrdID" />
+    </Message>
+    <Message type="8">
+      <Field tag="9717" name="CorrelationClOrdID" />
+    </Message>
+    <Message type="V">
+      <Field tag="1180" name="ApplID" />
+      <Field tag="1021" name="MDBookType" />
+    </Message>
+    <Message type="d">
+      <Field tag="762" name="SecuritySubType" />
+      <Field tag="1028" name="ManualOrderIndicator" />
+      <Field tag="9776" name="AutoQuoteRequest" />
+      <Field tag="942" name="LegStrikeCurrency" />
+      <Field tag="1017" name="LegOptionDelta" />
+      <Field tag="827" name="ExpirationCycle" />
+    </Message>
+  </FIX>
+</Dialect>

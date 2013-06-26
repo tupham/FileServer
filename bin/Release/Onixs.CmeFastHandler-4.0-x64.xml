@@ -1,0 +1,2099 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Onixs.CmeFastHandler-4.0-x64</name>
+    </assembly>
+    <members>
+        <member name="T:Onixs.CmeFastHandler.BestBidAskTrackingOptions">
+            <summary>
+            Describes parameters and thresholds wich will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.BestBidAskTrackingOptions.ToString">
+            <summary>
+            Returns a String that represents the current TradeEventArgs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.BestBidAskTrackingOptions.BestBidAskTrackingParameters">
+            <summary>
+            Describes which price level parameters will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.BestBidAskTrackingOptions.PriceThreshold">
+            <summary>
+            Price threshold in percents.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.BestBidAskTrackingOptions.QuantityThreshold">
+            <summary>
+            Quantity threshold in percents.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.BestBidAskTrackingOptions.OrdersCountThreshold">
+            <summary>
+            Orders count threshold in percents.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.BestBidAskTrackingParameter">
+            <summary>
+            Describes which price level parameters will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BestBidAskTrackingParameter.Neither">
+            <summary>
+            Best bids and asks will not be tracked.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BestBidAskTrackingParameter.Price">
+            <summary>
+            Price will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BestBidAskTrackingParameter.Quantity">
+            <summary>
+            Quantity will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BestBidAskTrackingParameter.OrdersCount">
+            <summary>
+            Orders count will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BestBidAskTrackingParameter.All">
+            <summary>
+            Price, quantity and orders count will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler">
+            <summary>
+            Provides access to the CME Group market data via FIX/FAST protocols.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.AddSecurityIdFilter(System.String)">
+            Add the Secirity ID filtering value. The filter is inclusive.
+            <param name="securityId">
+            SecurityID to be used for inclusive filtering.
+            </param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.RemoveSecurityIdFilter(System.String)">
+            <summary>
+            Removes the SecurityId filter value.
+            </summary>
+            <param name="securityId">
+            SecurityId value to remove from SecurityId filters.
+            </param>        
+            <returns>
+            true if the element is successfully 
+            found and removed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.ClearSecurityIdFilters">
+            Removes all the Security ID filters.
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.AddSecurityDescriptionFilter(System.String)">
+            <summary>
+            Add the Secirity Description filtering value. 
+            The filter is inclusive.
+            </summary>        
+            <param name="securityDesc">
+            SecurityDesc to be used for inclusive filtering.
+            </param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.RemoveSecurityDescriptionFilter(System.String)">
+            <summary>
+            Removes the Security Description filter value.
+            </summary>
+            <param name="securityDesc">
+            SecurityDesc value to remove from Security Description filters.
+            </param>        
+            <returns>
+            true if the element is successfully found 
+            and removed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.ClearSecurityDescriptionFilters">
+            Removes all the Security Description filters.
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.AddSecurityGroupFilter(System.String)">
+            <summary>
+            Add the Secirity Group filtering value. 
+            The filter is inclusive.
+            </summary>        
+            <param name="securityGroup">
+            SecurityGroup to be used for inclusive filtering.
+            </param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.RemoveSecurityGroupFilter(System.String)">
+            <summary>
+            Removes the Security Group filter value.
+            </summary>
+            <param name="securityGroup">
+            SecurityGroup value to remove from Security Group filters.
+            </param>        
+            <returns>
+            true if the element is successfully found and removed; 
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.ClearSecurityGroupFilters">
+            Removes all the Security Group filters.
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.AddSymbolFilter(System.String)">
+            <summary>
+            Add the Symbol filtering value. The filter is inclusive.
+            </summary>        
+            <param name="symbol">
+            Symbol to be used for inclusive filtering.
+            </param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.RemoveSymbolFilter(System.String)">
+            <summary>
+            Removes the Symbol filter value.
+            </summary>
+            <param name="symbol">
+            Symbol value to remove from Symbol filters.
+            </param>        
+            <returns>
+            true if the element is successfully 
+            found and removed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.ClearSymbolFilters">
+            Removes all the Symbol filters.
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.AddSubchannelFilter(System.Int32)">
+            <summary>
+            Add the Subchannel filtering value. 
+            The filter is inclusive.
+            </summary>        
+            <param name="subchannel">
+            Subchannel to be used for inclusive filtering.
+            </param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.RemoveSubchannelFilter(System.Int32)">
+            <summary>
+            Removes the Subchannel filter value.
+            </summary>
+            <param name="subchannel">
+            Subchannel value to remove from Subchannel filters.
+            </param>        
+            <returns>
+            true if the element is successfully found and removed; 
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.ClearSubchannelFilters">
+            Removes all Subchannel filters.
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="channelId">CME Market Data Feed Channel ID.</param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.Start">
+            <summary>
+            Starts the receiving and processing of market data.
+            
+            All types of books are maintained.
+            Security definitions was not cached.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.Start(Onixs.CmeFastHandler.ReplayOptions)">
+            <summary>
+            Starts handler in replaying logs mode. 
+            
+            All types of books are maintained.
+            </summary>
+            <param name="options">Replay options.</param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.Start(Onixs.CmeFastHandler.BooksMaintenanceOptions,Onixs.CmeFastHandler.ReplayOptions)">
+            <summary>
+            Starts handler in replaying logs mode using the spelcified books maintainance options. 
+            </summary>
+            <param name="booksMaintenanceOptions">Book maintenance options.</param>
+            <param name="options">Replay options.</param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.Start(System.Boolean)">
+            <summary>
+            Starts the receiving and processing of market 
+            data using cache security definitions option.
+            
+            All types of books are maintained.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.Start(Onixs.CmeFastHandler.BooksMaintenanceOptions)">
+            <summary>
+            Starts the receiving and processing of market 
+            data using the spelcified books maintainance options.
+            
+            Security definitions was not cached.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.Start(Onixs.CmeFastHandler.BooksMaintenanceOptions,System.Boolean)">
+            <summary>
+            Starts the receiving and processing of market data using the spelcified 
+            books maintainance options and cache security definitions option.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.Stop">
+            <summary>
+            Stops the receiving and processing of market data.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnTrade(Onixs.CmeFastHandler.Handler.TradeEventArgs)">
+            <summary>
+            Is called when the trade is received.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnStatistics(Onixs.CmeFastHandler.Handler.StatisticsEventArgs)">
+            <summary>
+            Is called when the statistics is received.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnMessageProcessingStarted(Onixs.CmeFastHandler.Handler.MessageProcessingStartedEventArgs)">
+            <summary>
+            Is called when the message processing is started.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnMessageProcessingFinished(Onixs.CmeFastHandler.Handler.MessageProcessingFinishedEventArgs)">
+            <summary>
+            Is called when the message processing is finished.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnInfo(Onixs.CmeFastHandler.Handler.InfoEventArgs)">
+            <summary>
+            Is called when the information message is reported.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnWarning(Onixs.CmeFastHandler.Handler.WarningEventArgs)">
+            <summary>
+            Is called when the Warning is reported.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnError(Onixs.CmeFastHandler.Handler.ErrorEventArgs)">
+            <summary>
+            Is called when Error is reported.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnNoDataOnFeedReceived(Onixs.CmeFastHandler.Handler.NoDataOnFeedReceivedEventArgs)">
+            <summary>
+            Is called when NoDataOnFeed is reported.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnSecurityStatusChanged(Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs)">
+            <summary>
+            Is called when the Security Status is changed.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnStatistcsReset(Onixs.CmeFastHandler.Handler.StatistcsResetEventArgs)">
+            <summary>
+            Is called when the Security Status is changed.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnNewsReceived(Onixs.CmeFastHandler.Handler.NewsReceivedEventArgs)">
+            <summary>
+            Is called when the News message is received.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnImpliedOrderBookReset(Onixs.CmeFastHandler.Handler.OrderBookEventArgs)">
+            <summary>
+            Is called when the implied order book is reset.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnRegularOrderBookReset(Onixs.CmeFastHandler.Handler.OrderBookEventArgs)">
+            <summary>
+            Is called when the regular order book is reset.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnImpliedOrderBookChanged(Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs)">
+            <summary>
+            Is called when the implied order book is changed.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnRegularOrderBookChanged(Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs)">
+            <summary>
+            Is called when the regular order book is changed.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnImpliedOrderBookUpdated(Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs)">
+            <summary>
+            Is called when the implied order book is updated.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnDirectOrderBookUpdated(Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs)">
+            <summary>
+            Is called when the regular order book is updated.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnConsolidatedOrderBookUpdated(Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs)">
+            <summary>
+            Is called when the Consolidated Order Book is updated.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnImpliedOrderBookTopOfTheBookUpdated(Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs)">
+            <summary>
+            Is called when the implied order book top of the book is updated.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnRegularOrderBookTopOfTheBookUpdated(Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs)">
+            <summary>
+            Is called when the regular order book top of the book is updated.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnConsolidatedOrderBookTopOfTheBookUpdated(Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs)">
+            <summary>
+            Is called when the Consolidated Order Book top of the book is updated.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnSecurityDefinitionReceived(Onixs.CmeFastHandler.Handler.SecurityDefinitionReceivedEventArgs)">
+            <summary>
+            Is called when the security definition message is received.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnSecurityDefinitionDeleted(Onixs.CmeFastHandler.Handler.SecurityDefinitionReceivedEventArgs)">
+            <summary>
+            Is called when the security definition message is received.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OnStateChanged(Onixs.CmeFastHandler.Handler.StateChangedEventArgs)">
+            <summary>
+            Is called when Handler's state is changed.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.InvokeEventHandler``1(System.EventHandler{``0},``0)">
+            <summary>
+            Invoke of handler safely
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.LogTrace(System.String)">
+            <summary>
+            Put text message to log
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.SecurityIdFilters">
+            Secirity ID filtering values.
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.SecurityDescriptionFilters">
+            Secirity Description filtering values.
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.SubchannelFilters">
+            Subchannel filtering values.
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.SecurityGroupFilters">
+            Secirity Group filtering values.
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.SymbolFilters">
+            Symbol filtering values.
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.RecoverSecurityDefinitionsOnGap">
+            <summary>
+            Option to recover the Security Definition messages each time when the message sequence gap is detected.
+            </summary>
+            <remarks>
+            Option to recover the Security Definition messages 
+            each time when the message sequence gap is detected.
+            
+            During the trading day new instruments can be defined, 
+            and these security definitions are sent over the Incremental 
+            A and B feeds.
+            Therefore it is possible to miss new intra-day security definition 
+            messages, so it could be required to listen to the instrument feed 
+            again on a message gap.
+            
+            On the other hand, this could significantly increase the time of 
+            re-syncronization with the market after the detected message gap.
+            
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.LocalNetworkInterface">
+            <summary>
+            The local network interface that is used to receive UDP multicast packets.
+            </summary>
+            <remarks>
+            If set to null then all available local network interfaces are used.
+            </remarks>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.LocalNetworkInterfaceA">
+            <summary>
+            The local network interface that is used to receive UDP multicast packets for "A" feeds.
+            </summary>
+            <remarks>
+            If set to null then the LocalNetworkInterface value is used.
+            </remarks>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.LocalNetworkInterfaceB">
+            <summary>
+            The local network interface that is used to receive UDP multicast packets for "B" feeds.
+            </summary>
+            <remarks>
+            If set to null then the LocalNetworkInterface value is used.
+            </remarks>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.ReceiveTimeoutInMilliseconds">
+            <summary>
+            Gets or sets the amount of time a Handler will wait to receive data once a read operation is initiated.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.ReportNoDataWarning">
+            <summary>
+            Gets or Set the flag to suppress OnWarning events for "NO DATA in Incremental A/B UdpReceiver during ReceiveTimeoutInMilliseconds"
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.DisposeFixMessages">
+            <summary>
+            Gets or Set the flag to dispose fix messages after handler was process it. Default value is true. 
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.UseIncrementalFeedA">
+            <summary>
+            Gets or Set the flag to use or not Incremental (UDP) Feed A
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.UseIncrementalFeedB">
+            <summary>
+            Gets or Set the flag to use or not Incremental (UDP) Feed B
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.UseSnapshotFeedA">
+            <summary>
+            Gets or Set the flag to use or not Market Recovery (UDP) Feed A
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.UseSnapshotFeedB">
+            <summary>
+            Gets or Set the flag to use or not Market Recovery (UDP) Feed B
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.UseInstrumentReplayFeedA">
+            <summary>
+            Gets or Set the flag to use or not Instrument Definition (UDP) Feed A
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.UseInstrumentReplayFeedB">
+            <summary>
+            Gets or Set the flag to use or not Instrument Definition (UDP) Feed B
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.ChannelId">
+            <summary>
+            CME Market Data Feed Channel ID.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.SecurityDefinitionsCacheRoot">
+            <summary>
+            Gets or Sets path where Security Definitions cache will be stored.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.ChannelConfigurationFile">
+            <summary>
+            Path to the CME Market Data Feed Channel configuration XML file.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.TcpReplay">
+            <summary>
+            Option to use the TcpReplay Channel for recovory of missed messages.
+            </summary>
+            <remarks>
+            This method recovers all missed messages.
+            </remarks>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.TcpReplayUsername">
+            <summary>
+            Userid or username to be used in the Logon (35=A) message from customer to CME Tcp Replay service. 
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.TcpReplayPassword">
+            <summary>
+            Password or passphrase to be used in the Logon (35=A) message from customer to CME Tcp Replay service. 
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.TcpReplayReconnectAttempts">
+            <summary>
+            Number of attempts to receive missed messages via CME Tcp Replay service.  
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.TcpReplayReconnectIntervalInMilliseconds">
+            <summary>
+            Interval between attempts to receive missed messages via CME Tcp Replay service (in milliseconds).  
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.FastTemplateFile">
+            <summary>
+            Path to the CME FAST templates file.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.LicenseFile">
+            <summary>
+            Path to the license file.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.MaximumNumberOfQueuedIncrementalRefreshMessages">
+            <summary>
+             Maximum number of queued Market Data Incremental Refresh (X) messages.
+            </summary>
+            <remarks>
+            When the message gap is detected all subsequent Refresh(X) messages are queued until the Handler re-synchronizes with the market 
+            using Snapshot(W) messages. After that the queued Refresh(X) messages are re-played. 
+            This setting could be used to limit the memory usage when there is no Market Data - Snapshot/Full Refresh (W) messages.
+            </remarks>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.FixDialectDescriptionFile">
+            <summary>
+            Path the CME FIX dialect description file.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.Timestamp">
+            <summary>
+            Timestamp delegate.
+            </summary>
+            <remarks>
+            Allows to use timestamps that are consistent in resolution, 
+            time and formatting with the rest of the application.
+            </remarks>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ReplayFinished">
+            <summary>
+            Logs replay finished.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ReplayError">
+            <summary>
+            Error during logs replay is reported.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.BestBidAskTrackingOptions">
+            <summary>
+            Describes parameters and thresholds wich 
+            will be used to track best bids and best asks.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.TraceSwitch">
+            <summary>
+            Trace switch to control Handler related tracing and debug output.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.ReceiversTraceSwitch">
+            <summary>
+            Trace switch to control udp receivers related tracing and debug output.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.FixMessagesTraceSwitch">
+            <summary>
+            Trace switch to control fix message processing related tracing and debug output.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.OrderBookTraceSwitch">
+            <summary>
+            Trace switch to control order books related tracing and debug output.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.Trade">
+            <summary>
+            Trade is received.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.Statistics">
+            <summary>
+            Statistics is received.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.MessageProcessingStarted">
+            <summary>
+            FIX message processing is started.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.MessageProcessingFinished">
+            <summary>
+            Message Processing Finished.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.Info">
+            <summary>
+            Information message is reported.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.Warning">
+            <summary>
+            Warning is reported.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.Error">
+            <summary>
+            Error is reported.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.NoDataOnFeedReceived">
+            <summary>
+            No data on feed is not received during ReceiveTimeoutInMilliseconds.
+            To turn on this event property ReportNoDataWarning should be set to true.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.SecurityStatusChanged">
+            <summary>
+            Security Status is changed.
+            </summary>			                       
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.StatisticsReset">
+            <summary>
+            Security Status is changed.
+            </summary>			                       
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.NewsReceived">
+            <summary>
+            News message is received.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ImpliedOrderBookReset">
+            <summary>
+            Implied Order Book is reset.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.RegularOrderBookReset">
+            <summary>
+            Regular Order Book is reset.
+            </summary>			        
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ImpliedOrderBookChanged">
+            <summary>
+            Implied Order Book is changed.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.RegularOrderBookChanged">
+            <summary>
+            Regular Order Book is changed.
+            </summary>			        
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ImpliedOrderBookUpdated">
+            <summary>
+            Implied Order Book is updated.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.RegularOrderBookUpdated">
+            <summary>
+            Regular Order Book is updated.
+            </summary>			        
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ConsolidatedOrderBookUpdated">
+            <summary>
+            Consolidated Order Book is updated.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ImpliedOrderBookTopOfTheBookUpdated">
+            <summary>
+            Implied Order Book top of the book is updated.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.RegularOrderBookTopOfTheBookUpdated">
+            <summary>
+            Regular Order Book top of the book is updated.
+            </summary>			        
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.ConsolidatedOrderBookTopOfTheBookUpdated">
+            <summary>
+            Consolidated Order Book top of the book is updated.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.SecurityDefinitionReceived">
+            <summary>
+            Security Definition message is received.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.SecurityDefinitionDeleted">
+            <summary>
+            Security Definition message is deleted.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.State">
+            <summary>
+            Handler's state.
+            </summary>
+        </member>
+        <member name="E:Onixs.CmeFastHandler.Handler.StateChanged">
+            <summary>
+            Handler's state is changed. 
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.ReplayErrorEventArgs">
+            <summary>
+            Replay error event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.ReplayErrorEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current Error event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ReplayErrorEventArgs.Description">
+            <summary>
+            Error description.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.Feed">
+            <summary>
+            Feed channel.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.Feed.A">
+            <summary>
+            A feed.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.Feed.B">
+            <summary>
+            B feed.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.NoDataOnFeedReceivedEventArgs">
+            <summary>
+            No data on data feed received event argument.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.NoDataOnFeedReceivedEventArgs.FeedName">
+            <summary>
+            Feed name.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.NoDataOnFeedReceivedEventArgs.ConnectionType">
+            <summary>
+            Connection type.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.NoDataOnFeedReceivedEventArgs.Feed">
+            <summary>
+            Feed.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.NoDataOnFeedReceivedEventArgs.Timeout">
+            <summary>
+            Time elapsed from last data received.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.NoDataOnFeedReceivedEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current Warning event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs">
+            <summary>
+            OrderBookUpdated event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.ToString">
+            <summary>
+            Returns the string representation of the current OrderBookUpdated event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.BestBid">
+            <summary>
+            Best Bid.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.BestAsk">
+            <summary>
+            Best Ask.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.SecurityId">
+            <summary>
+            Best Ask.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.ReceivingTimestamp">
+            <summary>
+            Time when handler received message from UDP socket (got by TimestampHelper.Ticks).  
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.SendingTime">
+            <summary>
+            Time of message transmission (always expressed in UTC (Coordinated Universal Time).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.MessageSequenceNumber">
+            <summary>
+            The message sequence number (tag 34) of the source FIX message.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.TradeDate">
+            <summary>
+            Indicates date of trade referenced in this event in YYYYMMDD format. 
+            DateTime.MinValue indicates current day (expressed in local time at place of trade).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TopOfTheOrderBookUpdatedEventArgs.TradingSessionId">
+            <summary>
+            Identifier for Trading Session.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.StatisticsEventArgs">
+            <summary>
+            Trade event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current TradeEventArgs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.SecurityId">
+            <summary>
+            Security ID.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.StatisticsType">
+            <summary>
+            Price value.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.Value">
+            <summary>
+            Price value.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.EntryTime">
+            <summary>
+            Time of Market Data Entry.            
+            </summary>            
+            <remarks>
+            If the value is absent in the source FIX message then TimeSpan.MinValue is reported.
+            </remarks>      
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.MsgSeqNum">
+            <summary>
+            The message sequence number (tag 34) of the source FIX message.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.DataBlocks">
+            <summary>
+            Source repeating group.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatisticsEventArgs.DataBlockIndex">
+            <summary>
+            Index of entry in source repeating group.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.OrderBookEventArgs">
+            <summary>
+            OrderBook event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OrderBookEventArgs.ToString">
+            <summary>
+            Returns the string representation of the current OrderBook event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookEventArgs.Book">
+            <summary>
+            Order book.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.StatistcsResetEventArgs">
+            <summary>
+            SecurityStatusChanged event argument.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatistcsResetEventArgs.Symbol">
+            <summary>
+            Security description.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StatistcsResetEventArgs.SecurityId">
+            <summary>
+            Security ID.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs">
+            <summary>
+            OrderBookUpdated event argument.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.Book">
+            <summary>
+            Order book.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.Side">
+            <summary>
+            Type of Side
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.BookChangeType">
+            <summary>
+            Type of Boo Change
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.PriceLevel">
+            <summary>
+            Changed price level
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.Quantity">
+            <summary>
+            Quantatity
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.NumberOfOrders">
+            <summary>
+            Number Of Orders
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.EntryTime">
+            <summary>
+            Time of message transmission (always expressed in UTC (Coordinated Universal Time).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.SendingTime">
+            <summary>
+            Time of message transmission (always expressed in UTC (Coordinated Universal Time).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.TradeDate">
+            <summary>
+            Indicates date of trade referenced in this event in YYYYMMDD format. 
+            DateTime.MinValue indicates current day (expressed in local time at place of trade).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.MessageSequenceNumber">
+            <summary>
+            The message sequence number (tag 34) of the source FIX message.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.DataBlocks">
+            <summary>
+            Source repeating group.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.DataBlockIndex">
+            <summary>
+            Index of entry in source repeating group.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.TradingSessionId">
+            <summary>
+            Identifier for Trading Session.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.ReportSequence">
+            <summary>
+            ReportSequence.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OrderBookChangedEventArgs.ToString">
+            <summary>
+            Returns the string representation of the current OrderBookUpdated event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs">
+            <summary>
+            OrderBookUpdated event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs.ToString">
+            <summary>
+            Returns the string representation of the current OrderBookUpdated event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs.Book">
+            <summary>
+            Order book.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs.ReceivingTimestamp">
+            <summary>
+            Time when handler received message from UDP socket (got by TimestampHelper.Ticks).  
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs.SendingTime">
+            <summary>
+            Time of message transmission (always expressed in UTC (Coordinated Universal Time).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs.MessageSequenceNumber">
+            <summary>
+            The message sequence number (tag 34) of the source FIX message.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs.TradeDate">
+            <summary>
+            Indicates date of trade referenced in this event in YYYYMMDD format. 
+            DateTime.MinValue indicates current day (expressed in local time at place of trade).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.OrderBookUpdatedEventArgs.TradingSessionId">
+            <summary>
+            Identifier for Trading Session.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.ErrorReason">
+            <summary>
+            Error reason.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.Unknown">
+            <summary>
+            Unknown reason.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.CannotProcessSnapshotMessage">
+            <summary>
+            Error while processing snapshot message.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.CannotProcessIncrementalMessage">
+            <summary>
+            Error while processing incremental message.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.CannotProcessSecurityDefinition">
+            <summary>
+            Error while processing security definition message.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.ReceivingDataFromFeedError">
+            <summary>
+            Error while receiving data from UDP feed.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.CannotReplayFromChannel">
+            <summary>
+            Error while replaying messages from replay channel.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.UserHandlerError">
+            <summary>
+            Error in user handler.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorReason.QueuedMessagesReplayFailed">
+            <summary>
+            Error during queued message replay.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.ErrorEventArgs">
+            <summary>
+            Error event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.ErrorEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current Error event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorEventArgs.Description">
+            <summary>
+            Error description.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.ErrorEventArgs.Reason">
+            <summary>
+            Error reason.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.InfoEventArgs">
+            <summary>
+            Information message event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.InfoEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current information event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.InfoEventArgs.Reason">
+            <summary>
+            Reason of the information message.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.MessageProcessingFinishedEventArgs">
+            <summary>
+            Message Processing Finished event argument.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.MessageProcessingFinishedEventArgs.ReceivingTimestamp">
+            <summary>
+            Time when handler received message from UDP socket (got by TimestampHelper.Ticks).  
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.MessageProcessingFinishedEventArgs.Message">
+            <summary>
+            Fix message
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.MessageProcessingStartedEventArgs">
+            <summary>
+            MessageProcessingStarted event argument.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Handler.MessageProcessingStartedEventArgs.Message">
+            <summary>
+            Fix message
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.NewsReceivedEventArgs">
+            <summary>
+            NewsReceived event argument.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.NewsReceivedEventArgs.Headline">
+            <summary>
+            News headline.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.NewsReceivedEventArgs.Body">
+            <summary>
+            News body.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.SecurityDefinitionReceivedEventArgs">
+            <summary>
+            SecurityDefinitionReceived event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.SecurityDefinitionReceivedEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current SecurityDefinitionReceived event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityDefinitionReceivedEventArgs.SecurityId">
+            <summary>
+            Security ID (FIX tag # 48).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityDefinitionReceivedEventArgs.SecurityDescription">
+            <summary>
+            Security Description (aka SecurityDesc, FIX tag # 107).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityDefinitionReceivedEventArgs.Definition">
+            <summary>
+            Source Security Definition (d) FIX Message.
+            </summary>            
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs">
+            <summary>
+            SecurityStatusChanged event argument.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.SecurityStatus">
+            <summary>
+            Security Status.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.SecurityTradingEvent">
+            <summary>
+            Security Trading Event. Undefined if security status data came from snapshot feed.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.Symbol">
+            <summary>
+            Security description.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.HighPrice">
+            <summary>
+            Security description.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.LowPrice">
+            <summary>
+            Security description. 
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.SecurityId">
+            <summary>
+            Security ID.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.SecurityStatusMessage">
+            <summary>
+            Security Status Message. Null if security status data came from snapshot feed.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.SecurityStatusChangedEventArgs.ToString">
+            <summary>
+            Returns the string representation of the current SecurityStatusChanged event arguments.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.StateChangedEventArgs">
+            <summary>
+            StateChanged event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.StateChangedEventArgs.ToString">
+            <summary>
+            Returns the string representation of the current StateChanged event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StateChangedEventArgs.NewState">
+            <summary>
+            Current Handler's state.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.StateChangedEventArgs.OldState">
+            <summary>
+            Previous Handler's state.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.TradeEventArgs">
+            <summary>
+            Trade event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.TradeEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current TradeEventArgs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.Condition">
+            <summary>
+            Trade condition.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.Direction">
+            <summary>
+            Tick direction.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.NetChangeFromPreviousDay">
+            <summary>
+            Net change from previous day’s closing price vs. last traded price.
+            
+            FIX field NetChgPrevDay (451).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.Price">
+            <summary>
+            Trade price.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.SecurityId">
+            <summary>
+            Security ID.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.Size">
+            <summary>
+            Trade size.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.EntryTime">
+            <summary>
+            Time of Market Data Entry.            
+            </summary>            
+            <remarks>
+            If the value is absent in the source FIX message then TimeSpan.MinValue is reported.
+            </remarks>      
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.SendingTime">
+            <summary>
+            Time of message transmission (always expressed in UTC (Coordinated Universal Time)).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.UpdateAction">
+            <summary>
+            Indicates types of  update action.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.AggressorSide">
+            <summary>
+            Indicates which side is aggressor of the trade.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.MessageSequenceNumber">
+            <summary>
+            The message sequence number (tag 34) of the source FIX message.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.TradeVolume">
+            <summary>
+            Total traded volume since the beginning of the session.
+            
+            FIX field TradeVolume (1020).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.TradeDate">
+            <summary>
+            Indicates date of trade referenced in this event in YYYYMMDD format. 
+            DateTime.MinValue indicates current day (expressed in local time at place of trade).
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.ReportSequence">
+            <summary>
+            Sequence number per Instrument update.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.TradingSessionId">
+            <summary>
+            Identifier for Trading Session.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.DataBlocks">
+            <summary>
+            Source repeating group.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.TradeEventArgs.DataBlockIndex">
+            <summary>
+            Index of entry in source repeating group.
+            </summary>            
+            <returns></returns>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.WarningReason">
+            <summary>
+            Warning reason.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.Unknown">
+            <summary>
+            Unknown reason.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.QueuedMessagesReplayFailed">
+            <summary>
+            Error during queued message replay.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.MessageGapDetected">
+            <summary>
+            Message gap detected.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.TcpReplayReconnectAttemptFailed">
+            <summary>
+            Error during tcp replay reconnect attempt.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.NoDataOnFeed">
+            <summary>
+            No data received on feed during NoDataWarningTimeout.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.OutOfOrderMessageQueueSizeExceeded">
+            <summary>
+            Out of order message queue size exceeded.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.DecodeMessageError">
+            <summary>
+            Decode message error.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.CannotReadMarketDepthFromMessage">
+            <summary>
+            Cannot read market depth from message.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.CannotFindBookDepthInRepository">
+            <summary>
+            Cannot find book depth in repository.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningReason.CannotReplaySecurityDefinitionFromCache">
+            <summary>
+            Error while replaying security definition from cache.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Handler.WarningEventArgs">
+            <summary>
+            Warning event argument.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.Handler.WarningEventArgs.ToString">
+            <summary>
+            Returns a String that represents the current Warning event argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningEventArgs.Description">
+            <summary>
+            Warning description.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Handler.WarningEventArgs.Reason">
+            <summary>
+            Warning reason.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.ConnectionType">
+            <summary>
+            Type of the CME Feed Connection.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.ConnectionType.Unknown">
+            <summary>
+            Unknown Connection Type.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.ConnectionType.Historical">
+            <summary>
+            Historical (aka Tcp Replay) connection.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.ConnectionType.Incremental">
+            <summary>
+            Incremental connection.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.ConnectionType.Instrument">
+            <summary>
+            Instrument connection.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.ConnectionType.Snapshot">
+            <summary>
+            Snapshot connection.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.IOrderBook">
+            <summary>
+            Order Book.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.IOrderBook.ToDetailedString">
+            <summary>
+            Returns the detailed string representation of the order book.
+            </summary>
+            <returns>Detailed string representation of the order book.</returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.IOrderBook.Clone">
+            <summary>
+            Creates a new object that is a deep copy of the current instance. 
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.SecurityId">
+            <summary>
+            Security ID.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.Depth">
+            <summary>
+            Depth of the order books.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.Bids">
+            <summary>
+            Bid price levels.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.Asks">
+            <summary>
+            Ask price levels.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.Type">
+            <summary>
+            Order book type.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.HighTradePrice">
+            <summary>
+            Trading Session High Price.
+            </summary>        
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.LowTradePrice">
+            <summary>
+            Trading Session Low Price.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.LastTradePrice">
+            <summary>
+            Price of the last trade.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.LastTradeQuantity">
+            <summary>
+            Quantity of the last trade.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IOrderBook.LastTradingSessionId">
+            <summary>
+            Last Trading Session Id
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.SecurityTradingEvent">
+            <summary>
+            Security Trading Event enum.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityTradingEvent.Undefined">
+            
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityTradingEvent.TradingHaltStopSpike">
+            
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityTradingEvent.ResumeOpen">
+            
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityTradingEvent.EndOfTradingSession">
+            
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityTradingEvent.PauseInTrading">
+            
+        </member>
+        <member name="T:Onixs.CmeFastHandler.StatisticsType">
+            <summary>
+            Statistics Type
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.UnknownStatisticsType">
+            Unknown statistics type.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.LastBestBidPrice">
+            Last best price (bid).
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.LastBestAskPrice">
+            Last best price (ask).
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.OpeningPrice">
+            Opening price.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.ClosingPrice">
+            Closing price.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.SettlementPrice">
+            Settlement price.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.TradingSessionHighPrice">
+            Trading session high price.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.TradingSessionLowPrice">
+            Trading session low price.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.TradeVolume">
+            Trade volume.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.OpenInterest">
+            Open Interest.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.SimulatedSell">
+            Simulated sell.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.SimulatedBuy">
+            Simulated buy.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.Prior">
+            Pre-Opening statistics.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.SessionHighBid">
+            Session highest bid.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.SessionLowOffer">
+            Session lowest offer.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.StatisticsType.FixingPrice">
+            Fixing Price.
+        </member>
+        <member name="T:Onixs.CmeFastHandler.OrderBookType">
+            Type of the order book.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.OrderBookType.Regular">
+            Regular order book.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.OrderBookType.Implied">
+            Implied order book.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.OrderBookType.Consolidated">
+            Consolidated order book.
+        </member>
+        <member name="T:Onixs.CmeFastHandler.IPriceLevel">
+            <summary>
+            Price Level.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.IPriceLevel.Clone">
+            <summary>
+            Creates a new object that is a deep copy of the current instance. 
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IPriceLevel.Quantity">
+            <summary>
+            Quantity or volume represented by the Price Level.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IPriceLevel.Price">
+            <summary>
+            Price.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.IPriceLevel.NumberOfOrders">
+            <summary>
+            Number of orders in the market.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.ReplayOptions">
+            <summary>
+            Contains options to start handler in replay logs mode.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.ReplayOptions.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.ReplayOptions.#ctor(System.String)">
+            <summary>
+            Constructor. 
+            </summary>
+            <param name="pathToLog">Path to log file.</param>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.ReplayOptions.Logs">
+            <summary>
+            Gets list of log files.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.ReplayOptions.DelayBetweenMessages">
+            <summary>
+            Delay between messages in milliseconds.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Timestamp">
+            <summary>
+            Returns the time stamp string.
+            </summary>
+            <returns>Time stamp string</returns>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.BooksMaintenanceOptions">
+            <summary>
+            Books maintenance options.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BooksMaintenanceOptions.None">
+            <summary>
+            No books are maintained.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BooksMaintenanceOptions.RegularBooksOnly">
+            <summary>
+            Only regular books are maintained.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BooksMaintenanceOptions.ImpliedBooksOnly">
+            <summary>
+            Only implied books are maintained.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BooksMaintenanceOptions.RegularAndImpliedBooks">
+            <summary>
+            Only regular and implied books are maintained.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BooksMaintenanceOptions.All">
+            <summary>
+            Regular, implied, and consolidated books are maintained.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.HandlerState">
+            <summary>
+            Handler state.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.Stopped">
+            <summary>
+            Handler is stopped.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.Started">
+            <summary>
+            Handler is started but no data processing is performed yet.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.SecurityDefinitionsRecoveryStarted">
+            <summary>
+            Subscribed to Instrument Definition stream.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.SecurityDefinitionsRecoveryFinished">
+            <summary>
+            All instruments are received.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.BooksResynchronizationStarted">
+            <summary>            
+            The correct books state is lost.             
+            </summary>
+            
+            <remarks>
+            Handler switches to this state when it joins the market and the initial books state is built from MarketDataSnapshotFullRefresh (W) messages
+            or when the TcpReplay is not used and the message sequence number gap is detected, so the book state should be re-built 
+            from MarketDataSnapshotFullRefresh (W) messages again.            
+                               
+            It should be assumed at this point that all books maintained in the Handler may no longer have the correct, latest state maintained by CME, 
+            so they are cleared.
+            </remarks>            
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.BooksResynchronizationFinished">
+             <summary>
+             The latest books state is restored.
+             </summary>
+            
+             <remarks>
+             Handler switches to this state when the the latest books state is restored from  MarketDataSnapshotFullRefresh (W() messages
+             (all snapshot data is retrieved).
+            
+             It should be assumed at this point that all books maintained in the Handler have the correct, latest state maintained by CME. 
+             </remarks>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.TcpReplayStarted">
+            <summary>
+            TCP Replays is started.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.HandlerState.TcpReplayFinished">
+            <summary>
+            TCP Replays is finished.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.SecurityStatus">
+            <summary>
+            Security Status.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.Undefined">
+            <summary>
+            Unspecified security status.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.TradingHalt">
+            <summary>
+            Trading Halt.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.PriceIndication">
+            <summary>
+            Price Indication
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.ReadyToTrade">
+            <summary>
+             Start of session.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.NotAvailableForTrading">
+            <summary>
+            End of session. 
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.UnknownOrInvalid">
+            <summary>
+            Unknown or Invalid.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.PreOpen">
+            <summary>
+            Pre Open.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.OpeningRotation">
+            <summary>
+            Opening Rotation.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.PreCross">
+            <summary>
+            Pre Cross.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.Cross">
+            <summary>
+            Cross.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.SecurityStatus.NoCancel">
+            <summary>
+            No Cancel.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Side">
+            <summary>
+            Order side.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Side.Buy">
+            <summary>
+            Buy side.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Side.Sell">
+            <summary>
+            Sell side.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.Side.Unspecified">
+            <summary>
+            Unknown side.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.TickDirection">
+            <summary>
+            Direction of the tick.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TickDirection.PlusTick">
+            <summary>
+            Plus Tick.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TickDirection.MinusTick">
+            <summary>
+            Minus Tick.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TickDirection.NoChange">
+            <summary>
+            No change.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.TradeCondition">
+            <summary>
+            Trade condition.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeCondition.Unspecified">
+            <summary>
+            Unspecified trade condition.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeCondition.ExchangeLast">
+            <summary>
+            Exchange Last.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeCondition.FinalPriceOfSession">
+            <summary>
+            Final Price of Session.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeCondition.OpeningTrade">
+            <summary>
+            Opening Trade.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeCondition.ExPitPrice">
+            <summary>
+            Ex-Pit Price.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeCondition.PriceCalculatedByGlobex">
+            <summary>
+            Price calculated by Globex.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.TradingSessionId">
+            <summary>
+            Identifier for Trading Session.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradingSessionId.Undefined">
+            <summary>
+            Undefined.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradingSessionId.PreOpening">
+            <summary>
+            Pre-opening.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradingSessionId.OpeningMode">
+            <summary>
+            Opening Mode.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradingSessionId.ContinuousTradingMode">
+            <summary>
+            Continuous Trading Mode.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.BookChangeType">
+            <summary>
+            Book Change type.
+            </summary>
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BookChangeType.UnknownBookChange">
+            Unknown book change type.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BookChangeType.Add">
+            Add entry to the book.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BookChangeType.Change">
+            Modify an entry in the book.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BookChangeType.Remove">
+            Delete an entry from the book.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.BookChangeType.Overlay">
+            add, modify, or delete an entry in the book.
+        </member>
+        <member name="T:Onixs.CmeFastHandler.TradeUpdateAction">
+            Type of Trade update action.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeUpdateAction.NewTrade">
+            New trade.
+        </member>
+        <member name="F:Onixs.CmeFastHandler.TradeUpdateAction.DeleteTrade">
+            Trade deletion.
+        </member>
+        <member name="T:Onixs.CmeFastHandler.NamespaceDoc">
+            <summary>
+            .NET CME FAST Handler.
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.OrderBook.Add(Onixs.CmeFastHandler.Side,System.Int32,System.Int32,System.Double,System.Int32)">
+            <summary>
+             Create/insert a new price at a specified price level.
+            </summary>
+            <param name="side"></param>
+            <param name="priceLevel">Position in the book. Starts from 0.</param>
+            <param name="price"></param>
+            <param name="quantity"></param>
+            <param name="numberOfOrders"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.OrderBook.Change(Onixs.CmeFastHandler.Side,System.Int32,System.Int32,System.Double,System.Int32)">
+            <summary>
+            Change quantity for a price at a specified price level.
+            </summary>
+            <param name="side"></param>
+            <param name="priceLevel">Position in the book.</param>
+            <param name="price"></param>
+            <param name="quantity"></param>
+            <param name="numberOfOrders"></param>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.OrderBook.Remove(Onixs.CmeFastHandler.Side,System.Int32,System.Double)">
+            <summary>
+            Remove a price at a specified price level.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.OrderBook.LastSequenceNumber">
+            <summary>
+            Sequence number of the last applied message.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.OrderBook.LastRptSeq">
+            <summary>
+            Report Sequence Number
+            </summary>
+        </member>
+        <member name="T:Onixs.CmeFastHandler.TimestampHelper">
+            <summary>
+            Contains methods to work with high-resolution 
+            performance counter. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.TimestampHelper.TicksToSeconds(System.Int64)">
+            <summary>
+            Returns the number of whole seconds 
+            represented by the specified number of ticks.
+            </summary>
+            <param name="ticks">A number of ticks.</param>
+            <returns>A number of whole seconds.</returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.TimestampHelper.TicksToMilliseconds(System.Int64)">
+            <summary>
+            Returns the number of whole milliseconds 
+            represented by the specified number of ticks.
+            </summary>
+            <param name="ticks">A number of ticks.</param>
+            <returns>A number of whole milliseconds.</returns>
+        </member>
+        <member name="M:Onixs.CmeFastHandler.TimestampHelper.TicksToMicroseconds(System.Int64)">
+            <summary>
+            Returns the number of whole microseconds 
+            represented by the specified number of ticks.
+            </summary>
+            <param name="ticks">A number of ticks.</param>
+            <returns>A number of whole microseconds.</returns>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.TimestampHelper.Ticks">
+            <summary>
+            Gets the number of ticks provided by 
+            the high-resolution performance counter.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.TimestampHelper.TicksPerSecond">
+            <summary>
+            Represents the number of ticks in 1 second.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.TimestampHelper.TicksPerMillisecond">
+            <summary>
+            Represents the number of ticks in 1 millisecond.
+            </summary>
+        </member>
+        <member name="P:Onixs.CmeFastHandler.TimestampHelper.TicksPerMicrosecond">
+            <summary>
+            Represents the number of ticks in 1 microsecond.
+            </summary>
+        </member>
+    </members>
+</doc>
