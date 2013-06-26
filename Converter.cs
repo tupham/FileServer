@@ -8,5 +8,8 @@ namespace FileServer.Utils
         {
           
         }
+		public string DisplayDecimalValue(decimal value){
+			return value.ToString();
+		}
     }
 }
