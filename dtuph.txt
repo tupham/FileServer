@@ -1,0 +1,44 @@
+[33mcommit 62574f93bbd740244b437ea3ee2a042106f35ce4[m
+Author: Tu Pham <tupham@imt.com.vn>
+Date:   Wed Jun 26 16:28:24 2013 +0700
+
+    Adding file PriceComboBox.cs
+
+[33mcommit 4d8fe966891b3a6ecc88bf45e5f1272d8ff4f858[m
+Merge: 41a5ae2 0bc9283
+Author: Tu Pham <tupham@imt.com.vn>
+Date:   Wed Jun 26 16:24:31 2013 +0700
+
+    Merge branch 'task3168'
+
+[33mcommit 41a5ae2bdeaecd5aace589dcd0b98b94a160ebd3[m
+Author: Tu Pham <tupham@imt.com.vn>
+Date:   Wed Jun 26 16:21:30 2013 +0700
+
+    Add new files
+
+[33mcommit 0bc92834677ec7b1d4c024db9303cc4691186d47[m
+Author: Tu Pham <tupham@imt.com.vn>
+Date:   Wed Jun 26 16:04:59 2013 +0700
+
+    Adding FileServerController.cs
+
+[33mcommit 26aeabe1ba383386cdea88b693556fad64087b0d[m
+Author: Tu Pham <tupham@imt.com.vn>
+Date:   Wed Jun 26 15:52:16 2013 +0700
+
+    Adding DisplayDecimalValue method
+
+[33mcommit ce43b175f5dfac61b9317810e40fa9fb0bc4236f[m
+Author: Tu Pham <tphamsaigon@gmail.com>
+Date:   Wed Jun 26 15:52:27 2013 +0700
+
+    Create new file for FileServer.Util
+    
+    Create a new file for FileServer.Utils, this file is to add the converter class
+
+[33mcommit 852c26fc93ec31b76ed33966e91a2047b6a6234c[m
+Author: unknown <TuPham@SAMSUNG-TUPHAM.mpifix.com>
+Date:   Mon Feb 27 10:42:22 2012 +0700
+
+    first commit
