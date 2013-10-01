@@ -1,1 +1,4 @@
 A1A1A112345678This is a conflict sample
+
+AAA
+SSS
