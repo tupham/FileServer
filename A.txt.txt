@@ -1,1 +1,1 @@
-This is a conflict sample
+A1A1A112345678This is a conflict sample
